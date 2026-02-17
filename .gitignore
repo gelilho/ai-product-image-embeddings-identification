@@ -1,0 +1,104 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables (NEVER commit secrets)
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Testing / Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Mypy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# ---------------------------------------------------------------------------
+# Images — all formats, anywhere in the repo
+# ---------------------------------------------------------------------------
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.webp
+*.svg
+*.ico
+*.heic
+*.heif
+*.avif
+
+# ---------------------------------------------------------------------------
+# Data artifacts (large / generated files)
+# ---------------------------------------------------------------------------
+data/cache/
+data/embeddings/
+data/output/
+data/queries/
+data/golden/*.xlsx
+data/golden/*.csv
+!data/golden/.gitkeep
+!data/cache/.gitkeep
+!data/embeddings/.gitkeep
+!data/output/.gitkeep
+!data/queries/.gitkeep
+
+# Embedding model weights and caches (can be huge)
+models/
+*.npy
+*.npz
+*.pt
+*.pth
+*.onnx
+*.bin
+*.safetensors
+
+# HuggingFace model cache
+~/.cache/huggingface/
+.cache/
+
+# ---------------------------------------------------------------------------
+# Heavy / binary files
+# ---------------------------------------------------------------------------
+*.zip
+*.tar
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+*.h5
+*.hdf5
+*.parquet
+*.feather
+*.arrow
+*.pickle
+*.pkl
+
+# Jupyter
+.ipynb_checkpoints/
+
+# uv lock (large, reproducible from pyproject.toml)
+# Uncomment below if you don't want to track it:
+# uv.lock
