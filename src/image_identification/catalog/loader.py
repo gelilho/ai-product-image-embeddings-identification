@@ -11,10 +11,10 @@ from pathlib import Path
 
 import pandas as pd
 
-from product_image_id.catalog.schema import SchemaConfig, validate_columns
-from product_image_id.domain.errors import CatalogError
-from product_image_id.domain.models import CatalogItem, Category, Gender
-from product_image_id.logging import logger
+from image_identification.catalog.schema import SchemaConfig, validate_columns
+from image_identification.domain.errors import CatalogError
+from image_identification.domain.models import CatalogItem, Category, Gender
+from image_identification.logging import logger
 
 # ---------------------------------------------------------------------------
 # Gender mapping

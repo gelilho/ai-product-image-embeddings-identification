@@ -10,12 +10,12 @@ from typing import TYPE_CHECKING
 
 import pandas as pd
 
-from product_image_id.logging import logger
+from image_identification.logging import logger
 
 if TYPE_CHECKING:
     from pathlib import Path
 
-    from product_image_id.domain.models import EnrichedItem
+    from image_identification.domain.models import EnrichedItem
 
 # Output column order
 OUTPUT_COLUMNS: list[str] = [

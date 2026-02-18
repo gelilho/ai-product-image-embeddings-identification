@@ -2,7 +2,7 @@
 
 import pytest
 
-from product_image_id.features.color_extractor import extract_color, normalize_color
+from image_identification.features.color_extractor import extract_color, normalize_color
 
 
 class TestExtractColor:

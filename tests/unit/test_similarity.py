@@ -3,8 +3,8 @@
 import numpy as np
 import pytest
 
-from product_image_id.index.in_memory import InMemoryIndex
-from product_image_id.index.similarity import cosine_similarity
+from image_identification.index.in_memory import InMemoryIndex
+from image_identification.index.similarity import cosine_similarity
 
 
 class TestCosineSimilarity:

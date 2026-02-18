@@ -14,8 +14,8 @@ from pathlib import Path
 
 import typer
 
-from product_image_id.config import AppConfig
-from product_image_id.logging import logger, setup_logging
+from image_identification.config import AppConfig
+from image_identification.logging import logger, setup_logging
 
 app = typer.Typer(
     name="ai-product-image-embeddings-identification",
@@ -61,17 +61,17 @@ def embedding_generation(
     # Lazy imports to avoid heavy model loading at CLI parse time
     import numpy as np
 
-    from product_image_id.catalog.loader import load_catalog
-    from product_image_id.domain.models import EnrichedItem, PipelineReport
-    from product_image_id.embeddings.interface import get_backend
-    from product_image_id.embeddings.metadata import EmbeddingMetadata
-    from product_image_id.features.category_classifier import classify_category
-    from product_image_id.features.color_extractor import extract_color
-    from product_image_id.images.fetcher import ImageFetcher
-    from product_image_id.images.url_builder import UrlBuilder
-    from product_image_id.images.validators import validate_image_bytes
-    from product_image_id.storage.csv_store import save_enriched_csv
-    from product_image_id.storage.embedding_store import EmbeddingStore
+    from image_identification.catalog.loader import load_catalog
+    from image_identification.domain.models import EnrichedItem, PipelineReport
+    from image_identification.embeddings.interface import get_backend
+    from image_identification.embeddings.metadata import EmbeddingMetadata
+    from image_identification.features.category_classifier import classify_category
+    from image_identification.features.color_extractor import extract_color
+    from image_identification.images.fetcher import ImageFetcher
+    from image_identification.images.url_builder import UrlBuilder
+    from image_identification.images.validators import validate_image_bytes
+    from image_identification.storage.csv_store import save_enriched_csv
+    from image_identification.storage.embedding_store import EmbeddingStore
 
     # ------------------------------------------------------------------
     # 0. Load existing embeddings (for per-item skip logic)
@@ -198,7 +198,7 @@ def embedding_generation(
     # ------------------------------------------------------------------
     backend = None
     if items_to_fetch:
-        import product_image_id.embeddings.marqo_backend  # noqa: F401
+        import image_identification.embeddings.marqo_backend  # noqa: F401
 
         backend = get_backend(
             config.embedding.backend,
@@ -428,13 +428,13 @@ def identify(
     from PIL import Image
 
     # Import backend to trigger registration
-    import product_image_id.embeddings.marqo_backend  # noqa: F401
-    from product_image_id.domain.models import Category
-    from product_image_id.embeddings.interface import get_backend
-    from product_image_id.features.zero_shot_classifier import classify_image_zero_shot
-    from product_image_id.index.in_memory import InMemoryIndex
-    from product_image_id.storage.csv_store import load_enriched_csv
-    from product_image_id.storage.embedding_store import EmbeddingStore
+    import image_identification.embeddings.marqo_backend  # noqa: F401
+    from image_identification.domain.models import Category
+    from image_identification.embeddings.interface import get_backend
+    from image_identification.features.zero_shot_classifier import classify_image_zero_shot
+    from image_identification.index.in_memory import InMemoryIndex
+    from image_identification.storage.csv_store import load_enriched_csv
+    from image_identification.storage.embedding_store import EmbeddingStore
 
     # ==================================================================
     # STEP 1/6 — Load query image
@@ -649,7 +649,7 @@ def evaluate(
     config = AppConfig()
     setup_logging(config.logging)
 
-    from product_image_id.eval.evaluator import evaluate_from_files
+    from image_identification.eval.evaluator import evaluate_from_files
 
     metrics = evaluate_from_files(
         golden_path=config.storage.golden_dataset,

@@ -13,8 +13,8 @@ from typing import TYPE_CHECKING
 
 import numpy as np
 
-from product_image_id.embeddings.metadata import EmbeddingMetadata
-from product_image_id.logging import logger
+from image_identification.embeddings.metadata import EmbeddingMetadata
+from image_identification.logging import logger
 
 if TYPE_CHECKING:
     from pathlib import Path

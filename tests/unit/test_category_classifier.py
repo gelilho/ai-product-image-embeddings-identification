@@ -5,8 +5,8 @@ Priority order: name keywords > family name.
 
 import pytest
 
-from product_image_id.domain.models import Category
-from product_image_id.features.category_classifier import classify_category
+from image_identification.domain.models import Category
+from image_identification.features.category_classifier import classify_category
 
 
 class TestClassifyCategory:

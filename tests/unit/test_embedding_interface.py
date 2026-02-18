@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING
 import numpy as np
 import pytest
 
-from product_image_id.embeddings.interface import (
+from image_identification.embeddings.interface import (
     EmbeddingBackend,
     get_backend,
     list_backends,

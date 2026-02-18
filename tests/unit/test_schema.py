@@ -2,8 +2,8 @@
 
 import pytest
 
-from product_image_id.catalog.schema import COLUMN_MAP, SchemaConfig, validate_columns
-from product_image_id.domain.errors import SchemaValidationError
+from image_identification.catalog.schema import COLUMN_MAP, SchemaConfig, validate_columns
+from image_identification.domain.errors import SchemaValidationError
 
 
 class TestValidateColumns:

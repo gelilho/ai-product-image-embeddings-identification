@@ -19,13 +19,17 @@ from typing import TYPE_CHECKING
 
 import httpx
 
-from product_image_id.config import FetcherConfig
-from product_image_id.domain.errors import FetchError, ImageTooLargeError, RateLimitExceededError
-from product_image_id.domain.models import FetchResult
-from product_image_id.images.rate_limiter import TokenBucketRateLimiter
-from product_image_id.images.url_builder import UrlBuilder
-from product_image_id.images.validators import validate_content_type
-from product_image_id.logging import logger
+from image_identification.config import FetcherConfig
+from image_identification.domain.errors import (
+    FetchError,
+    ImageTooLargeError,
+    RateLimitExceededError,
+)
+from image_identification.domain.models import FetchResult
+from image_identification.images.rate_limiter import TokenBucketRateLimiter
+from image_identification.images.url_builder import UrlBuilder
+from image_identification.images.validators import validate_content_type
+from image_identification.logging import logger
 
 if TYPE_CHECKING:
     from pathlib import Path

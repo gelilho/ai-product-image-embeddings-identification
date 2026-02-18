@@ -5,10 +5,10 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from product_image_id.domain.models import CatalogItem, Category, EnrichedItem, Gender
-from product_image_id.embeddings.metadata import EmbeddingMetadata
-from product_image_id.storage.csv_store import load_enriched_csv, save_enriched_csv
-from product_image_id.storage.embedding_store import EmbeddingStore
+from image_identification.domain.models import CatalogItem, Category, EnrichedItem, Gender
+from image_identification.embeddings.metadata import EmbeddingMetadata
+from image_identification.storage.csv_store import load_enriched_csv, save_enriched_csv
+from image_identification.storage.embedding_store import EmbeddingStore
 
 
 class TestCsvStore:

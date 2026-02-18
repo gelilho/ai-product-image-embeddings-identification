@@ -49,12 +49,12 @@ class TestPipelineIntegration:
 
     def test_catalog_to_enriched(self, fixture_catalog: Path, tmp_path: Path) -> None:
         """Test loading catalog → extracting features → saving enriched CSV."""
-        from product_image_id.catalog.loader import load_catalog
-        from product_image_id.domain.models import EnrichedItem
-        from product_image_id.features.category_classifier import classify_category
-        from product_image_id.features.color_extractor import extract_color
-        from product_image_id.images.url_builder import UrlBuilder
-        from product_image_id.storage.csv_store import save_enriched_csv
+        from image_identification.catalog.loader import load_catalog
+        from image_identification.domain.models import EnrichedItem
+        from image_identification.features.category_classifier import classify_category
+        from image_identification.features.color_extractor import extract_color
+        from image_identification.images.url_builder import UrlBuilder
+        from image_identification.storage.csv_store import save_enriched_csv
 
         # Load
         items = load_catalog(fixture_catalog)
@@ -96,9 +96,9 @@ class TestPipelineIntegration:
 
     def test_similarity_search_end_to_end(self, tmp_path: Path) -> None:
         """Test building index → searching → getting correct results."""
-        from product_image_id.embeddings.metadata import EmbeddingMetadata
-        from product_image_id.index.in_memory import InMemoryIndex
-        from product_image_id.storage.embedding_store import EmbeddingStore
+        from image_identification.embeddings.metadata import EmbeddingMetadata
+        from image_identification.index.in_memory import InMemoryIndex
+        from image_identification.storage.embedding_store import EmbeddingStore
 
         # Create fake embeddings
         embeddings = np.random.randn(5, 128).astype(np.float32)

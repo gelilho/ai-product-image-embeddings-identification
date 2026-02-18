@@ -5,7 +5,7 @@ import time
 
 import pytest
 
-from product_image_id.images.rate_limiter import TokenBucketRateLimiter
+from image_identification.images.rate_limiter import TokenBucketRateLimiter
 
 
 class TestTokenBucketRateLimiter:

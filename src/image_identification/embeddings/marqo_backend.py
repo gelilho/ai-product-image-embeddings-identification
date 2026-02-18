@@ -16,8 +16,8 @@ from typing import TYPE_CHECKING
 import numpy as np
 import torch
 
-from product_image_id.embeddings.interface import EmbeddingBackend, register_backend
-from product_image_id.logging import logger
+from image_identification.embeddings.interface import EmbeddingBackend, register_backend
+from image_identification.logging import logger
 
 if TYPE_CHECKING:
     from numpy.typing import NDArray

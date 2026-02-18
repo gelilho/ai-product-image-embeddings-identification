@@ -1,6 +1,6 @@
 """Tests for evaluation metrics."""
 
-from product_image_id.eval.metrics import EvalMetrics
+from image_identification.eval.metrics import EvalMetrics
 
 
 class TestEvalMetrics:

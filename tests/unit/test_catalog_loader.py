@@ -5,9 +5,9 @@ from pathlib import Path
 import pandas as pd
 import pytest
 
-from product_image_id.catalog.loader import load_catalog
-from product_image_id.domain.errors import CatalogError
-from product_image_id.domain.models import Category, Gender
+from image_identification.catalog.loader import load_catalog
+from image_identification.domain.errors import CatalogError
+from image_identification.domain.models import Category, Gender
 
 
 @pytest.fixture

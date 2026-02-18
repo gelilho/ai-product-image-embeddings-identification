@@ -1,7 +1,7 @@
 """Tests for logging setup."""
 
-from product_image_id.config import LoggingConfig
-from product_image_id.logging import logger, setup_logging
+from image_identification.config import LoggingConfig
+from image_identification.logging import logger, setup_logging
 
 
 class TestLoggingSetup:

@@ -9,13 +9,13 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
-from product_image_id.catalog.loader import load_catalog
-from product_image_id.logging import logger
+from image_identification.catalog.loader import load_catalog
+from image_identification.logging import logger
 
 if TYPE_CHECKING:
     from pathlib import Path
 
-    from product_image_id.domain.models import CatalogItem
+    from image_identification.domain.models import CatalogItem
 
 
 @dataclass(frozen=True)

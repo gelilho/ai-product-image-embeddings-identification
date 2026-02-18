@@ -11,8 +11,12 @@ from typing import TYPE_CHECKING
 
 import numpy as np
 
-from product_image_id.index.similarity import SimilarityIndex, SimilarityMatch, cosine_similarity
-from product_image_id.logging import logger
+from image_identification.index.similarity import (
+    SimilarityIndex,
+    SimilarityMatch,
+    cosine_similarity,
+)
+from image_identification.logging import logger
 
 if TYPE_CHECKING:
     from numpy.typing import NDArray

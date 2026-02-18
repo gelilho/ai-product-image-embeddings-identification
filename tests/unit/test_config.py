@@ -1,6 +1,6 @@
 """Tests for application configuration."""
 
-from product_image_id.config import (
+from image_identification.config import (
     AppConfig,
     EmbeddingConfig,
     FetcherConfig,

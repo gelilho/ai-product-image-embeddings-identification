@@ -8,9 +8,9 @@ from __future__ import annotations
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-from product_image_id.eval.golden_loader import load_golden_dataset
-from product_image_id.eval.metrics import EvalMetrics
-from product_image_id.logging import logger
+from image_identification.eval.golden_loader import load_golden_dataset
+from image_identification.eval.metrics import EvalMetrics
+from image_identification.logging import logger
 
 if TYPE_CHECKING:
     import numpy as np
@@ -42,8 +42,8 @@ def evaluate_from_files(
         Evaluation results.
     """
 
-    from product_image_id.index.in_memory import InMemoryIndex
-    from product_image_id.storage.embedding_store import EmbeddingStore
+    from image_identification.index.in_memory import InMemoryIndex
+    from image_identification.storage.embedding_store import EmbeddingStore
 
     # Load golden dataset
     golden_entries = load_golden_dataset(golden_path, limit=limit)

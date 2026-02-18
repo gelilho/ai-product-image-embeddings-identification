@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from product_image_id.domain.errors import SchemaValidationError
+from image_identification.domain.errors import SchemaValidationError
 
 # ---------------------------------------------------------------------------
 # Column mapping: raw D365 name → internal name

@@ -6,10 +6,10 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from product_image_id.embeddings.metadata import EmbeddingMetadata
-from product_image_id.eval.evaluator import evaluate_from_files
-from product_image_id.eval.golden_loader import load_golden_dataset
-from product_image_id.storage.embedding_store import EmbeddingStore
+from image_identification.embeddings.metadata import EmbeddingMetadata
+from image_identification.eval.evaluator import evaluate_from_files
+from image_identification.eval.golden_loader import load_golden_dataset
+from image_identification.storage.embedding_store import EmbeddingStore
 
 
 @pytest.fixture

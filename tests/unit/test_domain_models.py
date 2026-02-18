@@ -1,6 +1,6 @@
 """Tests for domain models."""
 
-from product_image_id.domain.errors import (
+from image_identification.domain.errors import (
     BackendNotFoundError,
     CatalogError,
     EmbeddingError,
@@ -10,7 +10,7 @@ from product_image_id.domain.errors import (
     SchemaValidationError,
     StorageError,
 )
-from product_image_id.domain.models import (
+from image_identification.domain.models import (
     CatalogItem,
     Category,
     Gender,

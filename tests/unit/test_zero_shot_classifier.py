@@ -6,8 +6,8 @@ from typing import TYPE_CHECKING
 
 import numpy as np
 
-from product_image_id.domain.models import Category
-from product_image_id.features.zero_shot_classifier import (
+from image_identification.domain.models import Category
+from image_identification.features.zero_shot_classifier import (
     CATEGORY_PROMPTS,
     classify_image_zero_shot,
 )

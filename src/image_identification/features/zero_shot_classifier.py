@@ -19,13 +19,13 @@ from typing import TYPE_CHECKING
 
 import numpy as np
 
-from product_image_id.domain.models import Category
-from product_image_id.logging import logger
+from image_identification.domain.models import Category
+from image_identification.logging import logger
 
 if TYPE_CHECKING:
     from numpy.typing import NDArray
 
-    from product_image_id.embeddings.interface import EmbeddingBackend
+    from image_identification.embeddings.interface import EmbeddingBackend
 
 # ---------------------------------------------------------------------------
 # Text prompts per category — multiple prompts per category for robustness.

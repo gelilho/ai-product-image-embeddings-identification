@@ -1,7 +1,7 @@
 """Logging setup using loguru — consistent across all modules.
 
 Usage:
-    from product_image_id.logging import logger
+    from image_identification.logging import logger
 
     logger.info("Processing item", item_code="311.00218")
 """
@@ -12,7 +12,7 @@ import sys
 
 from loguru import logger as _loguru_logger
 
-from product_image_id.config import LoggingConfig
+from image_identification.config import LoggingConfig
 
 # Re-export so every module imports from here
 logger = _loguru_logger

@@ -12,7 +12,7 @@ Works for both legacy (NNN.NNNNN) and new (e.g. 1MD10060553) code formats.
 
 from __future__ import annotations
 
-from product_image_id.config import FetcherConfig
+from image_identification.config import FetcherConfig
 
 
 class UrlBuilder:

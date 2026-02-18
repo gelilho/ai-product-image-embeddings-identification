@@ -5,8 +5,8 @@ import io
 import pytest
 from PIL import Image
 
-from product_image_id.domain.errors import ImageValidationError
-from product_image_id.images.validators import validate_content_type, validate_image_bytes
+from image_identification.domain.errors import ImageValidationError
+from image_identification.images.validators import validate_content_type, validate_image_bytes
 
 
 class TestValidateContentType:

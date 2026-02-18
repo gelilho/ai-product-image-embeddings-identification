@@ -9,7 +9,7 @@ import io
 
 from PIL import Image
 
-from product_image_id.domain.errors import ImageValidationError
+from image_identification.domain.errors import ImageValidationError
 
 # Allowed MIME types for product images
 ALLOWED_CONTENT_TYPES: frozenset[str] = frozenset(

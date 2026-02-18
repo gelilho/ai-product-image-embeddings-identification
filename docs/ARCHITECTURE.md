@@ -175,7 +175,7 @@ EnrichedItem[]
 
 ```
 ai-product-image-embeddings-identification/
-├── src/product_image_id/
+├── src/image_identification/
 │   ├── cli/main.py              # 3 CLI commands
 │   ├── catalog/                 # XLSX/CSV loading + schema
 │   ├── domain/                  # Models + errors

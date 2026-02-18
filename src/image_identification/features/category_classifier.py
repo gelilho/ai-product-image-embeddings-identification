@@ -7,7 +7,7 @@ Item name keywords take PRIORITY over family — e.g. "Trek Pants" in the
 
 from __future__ import annotations
 
-from product_image_id.domain.models import Category
+from image_identification.domain.models import Category
 
 # ---------------------------------------------------------------------------
 # Keyword sets — derived from golden dataset analysis

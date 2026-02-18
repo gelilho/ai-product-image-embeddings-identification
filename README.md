@@ -142,7 +142,7 @@ All configuration via environment variables. See `.env.example` for the full lis
 ## Project Structure
 
 ```
-src/product_image_id/
+src/image_identification/
 ├── cli/            # CLI commands (embedding-generation, identify, evaluate)
 ├── catalog/        # Catalog loading and schema validation
 ├── domain/         # Domain models and errors

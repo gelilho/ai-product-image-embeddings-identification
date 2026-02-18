@@ -6,8 +6,8 @@ import httpx
 import pytest
 import respx
 
-from product_image_id.config import FetcherConfig
-from product_image_id.images.fetcher import ImageFetcher
+from image_identification.config import FetcherConfig
+from image_identification.images.fetcher import ImageFetcher
 
 BASE_URL = "https://onretailimages.blob.core.windows.net/prod-mediaserver/Products"
 SUFFIX = "_000_001.png"
