@@ -100,6 +100,7 @@ source = ["image_identification"]
 omit = [
     "tests/*",
     "src/image_identification/cli/*",               # CLI is tested via integration/E2E
+    "src/image_identification/services/*",           # Services are tested via integration/E2E
     "src/image_identification/embeddings/marqo_backend.py",  # Requires model download
 ]
 

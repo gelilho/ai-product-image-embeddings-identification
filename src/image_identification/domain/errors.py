@@ -94,3 +94,24 @@ class BackendNotFoundError(EmbeddingError):
 
 class StorageError(PIIError):
     """Error reading or writing storage artifacts."""
+
+
+# ---------------------------------------------------------------------------
+# Service-layer errors
+# ---------------------------------------------------------------------------
+
+
+class EmbeddingsNotFoundError(PIIError):
+    """No embeddings found on disk — user must run embedding-generation first."""
+
+    def __init__(self, path: str) -> None:
+        self.path = path
+        super().__init__(f"No embeddings found at {path}. Run 'embedding-generation' first.")
+
+
+class NoCategoryItemsError(PIIError):
+    """The detected category has zero items in the index."""
+
+    def __init__(self, category: str) -> None:
+        self.category = category
+        super().__init__(f"No items of category '{category}' found in the index.")
